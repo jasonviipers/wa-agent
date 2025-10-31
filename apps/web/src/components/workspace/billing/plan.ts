@@ -1,5 +1,5 @@
 /**
- * Replier Platform Plans Configuration
+ * wagents Platform Plans Configuration
  * Defines subscription plans with their limits and features
  */
 

@@ -1,10 +1,10 @@
-# Replier - AI Agent Platform
+# wagents - AI Agent Platform
 
-Replier is a B2B SaaS platform that enables businesses to create AI agents that integrate with various platforms like Shopify, Facebook Marketplace, and WhatsApp to automate sales, negotiation, and customer support processes.
+wagents is a B2B SaaS platform that enables businesses to create AI agents that integrate with various platforms like Shopify, Facebook Marketplace, and WhatsApp to automate sales, negotiation, and customer support processes.
 
 ## Overview
 
-Replier allows businesses to deploy AI agents that can:
+wagents allows businesses to deploy AI agents that can:
 - Sell products automatically on multiple platforms
 - Negotiate with customers
 - Provide 24/7 customer support
@@ -54,7 +54,7 @@ Open [http://localhost:3001](http://localhost:3001) in your browser to see the w
 ## Project Structure
 
 ```
-replier/
+wagents/
 ├── apps/
 │   ├── web/         # Frontend application (Next.js)
 ├── packages/
