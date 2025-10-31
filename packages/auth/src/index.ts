@@ -106,6 +106,28 @@ export const auth = betterAuth({
               required: false,
               input: true,
             },
+            usedCredits: {
+              type: "number",
+              required: false,
+              defaultValue: 0,
+              input: true,
+            },
+            monthlyCredits: {
+              type: "number",
+              required: false,
+              defaultValue: 0,
+              input: true,
+            },
+            creditsResetDate: {
+              type: "date",
+              required: false,
+              input: true,
+            },
+            subscriptionEndDate: {
+              type: "date",
+              required: false,
+              input: true,
+            },
           },
         },
       },
@@ -144,11 +166,11 @@ export const auth = betterAuth({
         portal(),
         webhooks({
           secret: process.env.POLAR_WEBHOOK_SECRET as string,
-          
+
           // Handle subscription creation
           onSubscriptionCreated: async (payload) => {
             console.log("Subscription created:", payload);
-            
+
             const referenceId = payload.data.metadata?.referenceId;
             if (!referenceId) return;
 
@@ -189,7 +211,7 @@ export const auth = betterAuth({
           // Handle subscription status changes
           onSubscriptionActive: async (payload) => {
             console.log("Subscription activated:", payload);
-            
+
             const referenceId = payload.data.metadata?.referenceId;
             if (!referenceId) return;
 
@@ -204,7 +226,7 @@ export const auth = betterAuth({
 
           onSubscriptionCanceled: async (payload) => {
             console.log("Subscription canceled:", payload);
-            
+
             const referenceId = payload.data.metadata?.referenceId;
             if (!referenceId) return;
 
@@ -218,7 +240,7 @@ export const auth = betterAuth({
 
           onSubscriptionRevoked: async (payload) => {
             console.log("Subscription revoked:", payload);
-            
+
             const referenceId = payload.data.metadata?.referenceId;
             if (!referenceId) return;
 
@@ -237,7 +259,7 @@ export const auth = betterAuth({
           // Handle one-time purchases
           onOrderPaid: async (payload) => {
             console.log("Order paid:", payload);
-            
+
             // Handle one-time purchases if needed
             const referenceId = payload.data.metadata?.referenceId;
             if (!referenceId) return;

@@ -38,7 +38,7 @@ interface LoginFormProps extends React.ComponentProps<"div"> {
 
 export function AuthForm({
   className,
-  callbackURL = `/dashboard`,
+  callbackURL = `/workspace`,
   ...props
 }: LoginFormProps) {
   const router = useRouter();

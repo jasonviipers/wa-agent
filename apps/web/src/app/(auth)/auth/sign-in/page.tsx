@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 import { AuthForm } from "@/components/auth/auth-form";
 import { Button } from "@/components/ui/button";
-import { requireNoAuth } from "@/actions/server-auth-redirect";
 
 export const metadata: Metadata = {
   title: "Sign In",
@@ -11,7 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default async function AuthPage() {
-  await requireNoAuth();
 
   return (
     <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-background p-6 md:p-10">

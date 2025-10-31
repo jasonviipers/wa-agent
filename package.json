@@ -30,7 +30,15 @@
     "build": "turbo build",
     "check-types": "turbo check-types",
     "dev:native": "turbo -F native dev",
-    "dev:web": "turbo -F web dev"
+    "dev:web": "turbo -F web dev",
+    "db:push": "turbo -F @wagents/db db:push",
+    "db:studio": "turbo -F @wagents/db db:studio",
+    "db:generate": "turbo -F @wagents/db db:generate",
+    "db:migrate": "turbo -F @wagents/db db:migrate",
+    "db:start": "turbo -F @wagents/db db:start",
+    "db:watch": "turbo -F @wagents/db db:watch",
+    "db:stop": "turbo -F @wagents/db db:stop",
+    "db:down": "turbo -F @wagents/db db:down"
   },
   "dependencies": {},
   "devDependencies": {
