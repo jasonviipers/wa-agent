@@ -1,8 +1,8 @@
-import { getPlanBySlug, type PlanSlug } from "@/components/settings/billing/plan";
 import { db, eq, count, sql } from "@wagents/db";
 import { agent } from "@wagents/db/schema/agent";
 import { organization } from "@wagents/db/schema/auth";
 import type { PlanFeature } from "./types";
+import { getPlanBySlug, type PlanSlug } from "@/components/workspace/billing/plan";
 
 /**
  * Check if organization can create more agents based on their plan

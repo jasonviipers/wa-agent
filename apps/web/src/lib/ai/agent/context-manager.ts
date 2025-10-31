@@ -1,9 +1,3 @@
-/**
- * Agent Context Manager
- * Manages agent memory, entities, facts, and preferences across conversations
- * Following Next.js 16 and React 19 best practices
- */
-
 import { createId } from "@paralleldrive/cuid2";
 import { cache } from "react";
 import type { AgentContextState, AgentDecision, AgentMemoryEntry, RetrievalResult } from "../rag/types";
