@@ -80,7 +80,7 @@ export type PlatformConfig = {
 };
 
 /**
- * Cache tags for Next.js 16 revalidation
+ * Cache tags revalidation
  */
 export const CACHE_TAGS = {
   agents: (orgId: string) => `agents-${orgId}`,
