@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "../index.css";
-import Providers from "@/components/providers";
-import Header from "@/components/header";
+import QueryProviders from "@/providers/query-providers";
+import "./index.css";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -29,12 +28,11 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<Providers>
+				<QueryProviders>
 					<div className="grid grid-rows-[auto_1fr] h-svh">
-						<Header />
 						{children}
 					</div>
-				</Providers>
+				</QueryProviders>
 			</body>
 		</html>
 	);
