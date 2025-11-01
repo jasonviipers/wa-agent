@@ -6,3 +6,5 @@ export * from "./order";
 export * from "./product";
 export * from "./webhook";
 export * from "./analytics";
+export * from "./voice";
+export * from "./fine-tuning";
